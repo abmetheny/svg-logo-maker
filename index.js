@@ -29,15 +29,13 @@ const questions = [
     },
 ];
 
-// Function to write SVG to HTML  file
-// function writeToFile(fileName, answersArray) {
-//     console.log(answersArray);
-
-//     fs.writeFile(`newSVG.html`, answersArray, (err) => {
-//                 if (err) throw err;
-//                 console.log("Saved!");
-//             });
-// }
+// Function to write to SVG file
+function writeToFile(svgContent) {
+    fs.writeFile(`logo.svg`, svgContent, (err) => {
+                if (err) throw err;
+                console.log("Saved!");
+            });
+}
 
 // Function to initialize app
 function init() {
@@ -55,9 +53,8 @@ function init() {
 
             console.log(newShape.renderShape(text, textfill, shape, shapefill));
             
-            // const answersObj = generateMarkdown(answers);
-            // const fileName = answers.title;
-            // writeToFile(fileName, answersArray);
+            const svgContent = newShape.renderShape(text, textfill, shape, shapefill);
+            writeToFile(svgContent);
             
         })
         .catch((error) => {
