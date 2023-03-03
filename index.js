@@ -1,7 +1,7 @@
 // Imports needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const { Shape, Triangle, Square, Circle } = require('./lib/shapes.js')
+const Shape = require('./lib/shapes.js')
 // const generateMarkdown = require('./utils/generateMarkdown');
 
 // Array of questions for user input
@@ -20,7 +20,7 @@ const questions = [
         type: 'list',
         name: 'shape',
         message: 'Choose a shape for your logo',
-        choices: ['circle', 'triangle', 'square'],
+        choices: ['triangle', 'square', 'circle'],
     },
     {
         type: 'input',
@@ -28,24 +28,6 @@ const questions = [
         message: 'Enter a color/hex number for your shape.',
     },
 ];
-
-function createShape(shapeFill, textFill) {
-    return new Shape(
-        '1.1',
-        '300',
-        '200',
-        'http://www.w3.org/2000/svg',
-        '150',
-        '100',
-        shapeFill,
-        '150',
-        '125',
-        '60',
-        'middle',
-        textFill
-    );
-}
-  
 
 // Function to write SVG to HTML  file
 // function writeToFile(fileName, answersArray) {
@@ -62,15 +44,21 @@ function init() {
     inquirer
         .prompt(questions)
         .then((answers) => {
-            // console.log(answers.Title);
             // console.log(answers);
-            const shapeFill = answers.shapecolor;
-            const textFill = answers.textcolor;
-            const shape = JSON.stringify(createShape(shapeFill, textFill));
-            console.log("createShape function run: " + shape);
+            const text = answers.text;
+            const textfill = answers.textcolor;
+            const shape = answers.shape;
+            const shapefill = answers.shapecolor;
+
+            const newShape = new Shape(text, textfill, shape, shapefill);
+            console.log(newShape);
+
+            console.log(newShape.renderShape(text, textfill, shape, shapefill));
+            
             // const answersObj = generateMarkdown(answers);
             // const fileName = answers.title;
             // writeToFile(fileName, answersArray);
+            
         })
         .catch((error) => {
             if (error.isTtyError) {
