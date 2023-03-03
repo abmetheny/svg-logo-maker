@@ -1,0 +1,26 @@
+{
+  "name": "svg-logo-maker",
+  "version": "1.0.0",
+  "description": "A command-line application that generates an SVG logo based on user input.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abmetheny/svg-logo-maker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abmetheny/svg-logo-maker/issues"
+  },
+  "homepage": "https://github.com/abmetheny/svg-logo-maker#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
+    "jest": "^29.4.3"
+  }
+}
