@@ -1,7 +1,8 @@
 // Imports needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const Shape = require('./lib/shapes.js')
+const Shape = require('./lib/shapes.js');
+const Validate = require('./lib/validate.js')
 // const generateMarkdown = require('./utils/generateMarkdown');
 
 // Array of questions for user input
@@ -10,11 +11,25 @@ const questions = [
         type: 'input',
         name: 'text',
         message: 'Enter up to 3 characters for SVG text.',
+        validate: (answerString) => {
+            const validate = new Validate(answerString);
+            if(!validate.isText() || !validate.isLength()){
+                console.log("\n Please enter SVG text up to 3 characters.")
+                return false
+            } return true
+        }
     },
     {
         type: 'input',
         name: 'textcolor',
         message: 'Enter a color/hex number for your text.',
+        validate: (answerString) => {
+            const validate = new Validate(answerString);
+            if(!validate.isTextColor() || !validate.isLength()){
+                console.log("\n Please enter a valid color.")
+                return false
+            } return true
+        }
     },
     {
         type: 'list',
@@ -26,6 +41,13 @@ const questions = [
         type: 'input',
         name: 'shapecolor',
         message: 'Enter a color/hex number for your shape.',
+        validate: (answerString) => {
+            const validate = new Validate(answerString);
+            if(!validate.isTextColor() || !validate.isLength()){
+                console.log("\n Please enter a valid color.")
+                return false
+            } return true
+        }
     },
 ];
 
