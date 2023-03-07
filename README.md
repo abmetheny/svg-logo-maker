@@ -34,10 +34,10 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
   * User-entered color is used as the SVG text color
   * User-selected shape is used as the SVG output shape
   * User-entered color is used as the SVG shape color
-* Sample output is saved in the examples folder
+* Sample output SVG file is saved in the examples folder
 
 ## Link to walkthrough tutorial
-[SVG Logo Maker Walkthrough](https://drive.google.com/file/d/1KuGVTMd-5G66gyP1AdIoCPtMhW84EZl-/view?usp=share_link)
+[SVG Logo Maker Walkthrough](https://drive.google.com/file/d/15GOJxDSz0QwNd3vxMNHbGLJ95I2trxii/view?usp=share_link)
 
 ## Screenshots
 <img src="./assets/images/Screenshot1.png">  
