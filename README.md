@@ -27,18 +27,17 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
   * Wrote questions for users to answer in the command-line application
   * Included Inquirer validation checking to validate user inputs
 * Imported Jest package for test validation
+  * There are two testing suites, one for validating user inputs and one for validating shape generation
+  * Tests check for blank entries, SVG text longer than 3 characters, and appropriate shape fill color
 * Answers to command-line questions are passed into a JavaScript function to generate an SVG file
   * User-entered text is used as the SVG text
-  * User-selected license is displayed as a clickable banner at the top as well as a clickable link in the License section
-  * GitHub username links to user's GitHub profile page
-  * Email address is clickable and opens a blank email
-  * Table of contents links to relative sections within the README
-
-## Link to deployed GitHub page
-[Deployed Challenge 9 README Generator](https://abmetheny.github.io/readme-generator/)
+  * User-entered color is used as the SVG text color
+  * User-selected shape is used as the SVG output shape
+  * User-entered color is used as the SVG shape color
+* Sample output is saved in the examples folder
 
 ## Link to walkthrough tutorial
-[README Generator walkthrough](https://drive.google.com/file/d/1J1SiNfNuwHeCyqr6tUaChFOurwLVETRV/view?usp=sharing)
+[SVG Logo Maker Walkthrough](https://drive.google.com/file/d/1J1SiNfNuwHeCyqr6tUaChFOurwLVETRV/view?usp=sharing)
 
 ## Screenshots
 <img src="./assets/images/Screenshot1.png">

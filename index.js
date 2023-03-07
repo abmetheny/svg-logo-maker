@@ -63,7 +63,6 @@ function init() {
     inquirer
         .prompt(questions)
         .then((answers) => {
-            console.log(answers);
             const text = answers.text;
             const textfill = answers.textcolor;
             const shape = answers.shape;
