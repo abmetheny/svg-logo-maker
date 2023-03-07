@@ -37,16 +37,18 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 * Sample output is saved in the examples folder
 
 ## Link to walkthrough tutorial
-[SVG Logo Maker Walkthrough](https://drive.google.com/file/d/1J1SiNfNuwHeCyqr6tUaChFOurwLVETRV/view?usp=sharing)
+[SVG Logo Maker Walkthrough](https://drive.google.com/file/d/1KuGVTMd-5G66gyP1AdIoCPtMhW84EZl-/view?usp=share_link)
 
 ## Screenshots
-<img src="./assets/images/Screenshot1.png">
-<img src="./assets/images/Screenshot2.png">
+<img src="./assets/images/Screenshot1.png">  
+
+<img src="./assets/images/Screenshot2.png">  
+
 <img src="./assets/images/Screenshot3.png">
 
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
 
 # Resources
-- Node packages: [Inquirer](https://www.npmjs.com/package/inquirer)
-- License badges: [Markdown License Badges Repo](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba)
+- Inquirer npm package: [Inquirer](https://www.npmjs.com/package/inquirer)
+- Jest npm package: [Jest](https://www.npmjs.com/package/jest)
