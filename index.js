@@ -58,7 +58,7 @@ function writeToFile(svgContent) {
             });
 }
 
-// Function to initialize app
+// Function to initialize inquirer and set Shape class parameters to user answers
 function init() {
     inquirer
         .prompt(questions)
@@ -70,6 +70,7 @@ function init() {
 
             const newShape = new Shape(text, textfill, shape, shapefill);
             
+            //Calls to render the shape per user inputs and create a "logo.svg" file
             const svgContent = newShape.renderShape(text, textfill, shape, shapefill);
             writeToFile(svgContent);
             
